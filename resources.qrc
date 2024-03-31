@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/critical_infrastructure" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

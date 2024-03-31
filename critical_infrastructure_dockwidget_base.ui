@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CriticalInfrastructureDockWidgetBase</class>
+ <widget class="QDockWidget" name="CriticalInfrastructureDockWidgetBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>419</width>
+    <height>265</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Critical Infrastructure</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContent">
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>400</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="title">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>280</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>Select the layers you want to add:          State:</string>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" rowspan="2" colspan="2">
+     <layout class="QGridLayout" name="gridLayout_1" rowstretch="0,0,0,0,0,0,0,0">
+      <property name="leftMargin">
+       <number>1</number>
+      </property>
+      <property name="topMargin">
+       <number>1</number>
+      </property>
+      <property name="rightMargin">
+       <number>1</number>
+      </property>
+      <property name="bottomMargin">
+       <number>1</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="Courthouses">
+        <property name="text">
+         <string>Courthouses</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="ChildCareCenters">
+        <property name="text">
+         <string>Child care centers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="CellTowers">
+        <property name="text">
+         <string>Cell towers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QCheckBox" name="Schools">
+        <property name="text">
+         <string>Schools</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QCheckBox" name="Universities">
+        <property name="text">
+         <string>Universities</string>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="AircraftLandingFacilities">
+        <property name="text">
+         <string>Aircraft landing facilities</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QCheckBox" name="Docks">
+        <property name="text">
+         <string>Docks</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="DialysisCenters">
+        <property name="text">
+         <string>Dialysis centers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="FireStations">
+        <property name="text">
+         <string>Fire stations</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QCheckBox" name="Hospitals">
+        <property name="text">
+         <string>Hospitals</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QCheckBox" name="MajorStateGovernmentBuildings">
+        <property name="text">
+         <string>Major state government buildings</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QCheckBox" name="Pharmacies">
+        <property name="text">
+         <string>Pharmacies</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QCheckBox" name="PoliceStations">
+        <property name="text">
+         <string>Police stations</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="cancelButton">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="createLayersButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="stateSelector">
+      <item>
+       <property name="text">
+        <string>AL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AK</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AZ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>FL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>GA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>HI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IN</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KY</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>LA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ME</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MN</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NV</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NH</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NJ</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NM</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NY</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ND</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>OH</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>OR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>PA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TN</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TX</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>UT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>WA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>WV</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>WI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>WY</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>DC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>FM</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>GU</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MH</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MP</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>PW</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>PR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VI</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
