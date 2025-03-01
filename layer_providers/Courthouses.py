@@ -3,8 +3,7 @@ from PyQt5.QtCore import QVariant
 from qgis.core import *
 
 def get_layer(state):
-    response = requests.get(
-        "https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/Courthouses_gdb/FeatureServer/0/query?where=STATE%20%3D%20'" + state + "'&outFields=*&outSR=4326&f=json").json()
+    response = requests.get("https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer/40/query?where=STATE%20%3D%20'" + state + "'&outFields=*&outSR=4326&f=json").json()
     courthouses = response["features"]
 
     layer = QgsVectorLayer('Point?crs=epsg:4326', 'Courthouses-' + state, 'memory')

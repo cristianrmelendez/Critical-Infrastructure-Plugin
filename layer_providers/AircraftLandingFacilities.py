@@ -4,9 +4,7 @@ from qgis.core import *
 
 
 def get_layer(state):
-    response = requests.get("https://services.arcgis.com/xOi1kZaI0eWDREZv/ArcGIS/rest/services/Aviation_Facilities"
-                            "/FeatureServer/0/query?where=STATE_CODE%20%3D%20'" + state +
-                            "'&outFields=*&outSR=4326&f=json").json()
+    response = requests.get("https://services.arcgis.com/xOi1kZaI0eWDREZv/arcgis/rest/services/NTAD_Aviation_Facilities/FeatureServer/0/query?where=STATE_CODE%20%3D%20'" + state + "'&outFields=*&outSR=4326&f=json").json()
 
     airports = response["features"]
 
@@ -21,6 +19,7 @@ def get_layer(state):
     airports_fields.append(QgsField('Name', QVariant.String))
     airports_fields.append(QgsField('Type', QVariant.String))
     airports_fields.append(QgsField('City', QVariant.String))
+    airports_fields.append(QgsField('FacilityType', QVariant.String))  # Adding Facility Type
 
     prov = layer.dataProvider()
     prov.addAttributes(airports_fields)
@@ -38,7 +37,7 @@ def get_layer(state):
         # Adding the attributes of the airports to the point
         feat.setAttributes(
             [e['attributes']['OBJECTID'], e['attributes']['ARPT_NAME'], e['attributes']['SITE_TYPE_CODE'],
-             e['attributes']['CITY']])
+             e['attributes']['CITY'], e['attributes']['FACILITY_USE_CODE']])  # Adding Facility Type
 
         # Adding the feature to the layer
         prov.addFeatures([feat])
@@ -47,4 +46,3 @@ def get_layer(state):
     layer.commitChanges()
 
     return layer
-# ***************************************************************************/

@@ -8,8 +8,7 @@ from .layer_providers import DialysisCenters
 from .layer_providers import Docks
 from .layer_providers import FireStations
 from .layer_providers import Hospitals
-from .layer_providers import MajorStateGovernmentBuildings
-from .layer_providers import Pharmacies
+from .layer_providers import NursingHomes
 from .layer_providers import PoliceStations
 from .layer_providers import Schools
 from .layer_providers import Universities
