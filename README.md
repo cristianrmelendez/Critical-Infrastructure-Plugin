@@ -22,10 +22,10 @@ The Critical Infrastructure QGIS Plugin is an intuitive and user-friendly tool d
 
 ## Installation
 To install the Critical Infrastructure QGIS Plugin, follow these steps:
-1. Download the plugin from the GitHub repository.
+1. Download the plugin from the GitHub repository and ZIP it.
 2. Open QGIS.
 3. Navigate to the plugin installation section.
-4. Install the downloaded plugin.
+4. Install the downloaded plugin using the "Install from ZIP" option.
 5. Activate the plugin in the QGIS plugin manager.
 
 ## Usage
